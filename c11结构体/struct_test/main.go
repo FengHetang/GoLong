@@ -14,7 +14,22 @@ import (
 	"unsafe"
 )
 
-import _ "GoLong/c11结构体/new_pkg"
+type Course struct {
+	Name  string
+	Price int
+	Url   string
+}
+
+// 函数的接收者  把
+func (c Course) printCourseInfo() {
+	fmt.Printf("课程名:%s,课程的价格：%d,课程的地址：%s\n", c.Name, c.Price, c.Url)
+}
+
+func (c *Course) setPrice(price int) {
+	c.Price = price
+}
+
+// 结构体的方法只能和结构体再一个包里面
 
 func main() {
 	//go语言不支持面向对象
@@ -92,4 +107,11 @@ func main() {
 	//s1 := []string{"django", "tornado", "scrapy", "celery"}
 	//fmt.Println(unsafe.Sizeof(s1)) // 12
 
+	//达到了封装数据和封装方法的效果
+	c12 := Course{"scrapy", 110, "http:www.imooc.com"}
+	Course.printCourseInfo(c12) // 效果一致
+	//c12.printCourseInfo()
+	c12.setPrice(120)
+	c12.printCourseInfo()
+	
 }
