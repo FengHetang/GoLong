@@ -113,5 +113,5 @@ func main() {
 	//c12.printCourseInfo()
 	c12.setPrice(120)
 	c12.printCourseInfo()
-	
+
 }
