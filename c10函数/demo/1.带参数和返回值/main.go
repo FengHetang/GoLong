@@ -10,6 +10,8 @@ package main
 
 import "fmt"
 
+// numberOne he numberTwo 是函数的两个参数，数据类型是int型
+// 该函数有一个返回值，数据类型是int型
 func SumNumber(numberOne int, numberTwo int) int {
 	return numberOne + numberTwo
 }
