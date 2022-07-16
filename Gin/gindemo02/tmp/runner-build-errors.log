@@ -1,4 +1,0 @@
-# gindemo02
-.\main.go:48:9: not enough arguments in call to c.JSON
-	have ()
-	want (int, interface {})
