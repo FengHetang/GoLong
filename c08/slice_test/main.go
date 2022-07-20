@@ -8,7 +8,9 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	//什么是切片
@@ -34,4 +36,5 @@ func main() {
 
 	// 切片传递是引用传递
 	// slice 很重要 很常用
+
 }
